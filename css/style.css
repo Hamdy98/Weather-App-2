@@ -1,0 +1,292 @@
+/* Global */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #1e202b;
+  --secondry-color: #262936;
+  --Third-color: #323544;
+  --blue-color: #009ad8;
+  --gray-color: #bfc1c8;
+  --white-color: #fff;
+}
+body {
+  background-color: var(--main-color);
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+p {
+  color: var(--gray-color);
+}
+
+/* Header */
+header {
+  background-color: var(--main-color);
+}
+.logo-div .logo-a img {
+  width: 64px;
+  height: 38px;
+}
+.logo-div .logo-a .logo-title p {
+  font-size: 16px;
+  color: var(--white-color);
+  font-weight: 700;
+}
+.logo-div .logo-a .logo-title small {
+  font-size: 10px;
+  color: var(--gray-color);
+  display: block;
+}
+header ul li {
+  margin-left: 10px;
+}
+header ul li a {
+  padding: 5px 20px;
+  color: #fff;
+  font-weight: 400;
+  font-size: 14px;
+  transition: all 0.3s;
+  border: 2px solid var(--main-color);
+  border-radius: 20px;
+}
+header ul li a.active {
+  border: 2px solid var(--blue-color);
+  color: var(--blue-color);
+}
+header ul li a:hover {
+  border: 2px solid var(--blue-color);
+  color: var(--blue-color);
+}
+.bars {
+  cursor: pointer;
+  display: none;
+  transition: all 0.3s;
+}
+.bars:hover i {
+  color: var(--blue-color);
+}
+.bars i {
+  color: #fff;
+  font-size: 24px;
+}
+.mobile-nav {
+  display: none;
+  padding-top: 30px;
+}
+.mobile-nav.active-block {
+  display: block;
+}
+.mobile-nav .menu {
+  background: #262936;
+  list-style: none;
+  text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mobile-nav .menu li{
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-left: 0;
+}
+.mobile-nav .menu li:last-child {
+  border-bottom: none;
+}
+.mobile-nav .menu li a {
+  padding: 20px;
+  display: block;
+  border: none;
+  border-radius: 0;
+}
+
+/* Find Location Section */
+section.location {
+  background-image: url("../weather-icons/banner.png");
+  padding: 70px 0;
+  min-height: 350px;
+  background-size: cover;
+}
+section.location form {
+  position: relative;
+  margin-bottom: 30px;
+}
+section.location input[type="text"]{
+  padding: 15px 50px 15px 20px;
+  background-color: var(--main-color);
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: var(--white-color);
+}
+section.location input[type="submit"]{
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  border: none;
+  border-radius: 30px;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  padding: 0 40px;
+}
+
+/* Weather Details Section */
+.weather-details {
+  background-color: var(--Third-color);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  margin-top: -150px;
+}
+.weather-details .weather-today {
+  width: 33.3%;
+}
+.weather-details .weather-today .header-box {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-between;
+  color: var(--gray-color);
+}
+.weather-details .weather-today .header-box .day {
+  display: inline-block;
+}
+.weather-details .weather-today .header-box .data {
+  display: inline-block;
+}
+.weather-details .weather-today .content-box {
+  text-align: left;
+  /* padding-top: 30px;
+  padding-bottom: 30px; */
+  padding: 30px 20px;
+}
+.weather-details .weather-today .content-box .location-weather {
+  color: var(--gray-color);
+  font-weight: 400;
+}
+.weather-details .weather-today .content-box .degree-weather .number {
+  font-size: 80px;
+  color: var(--white-color);
+  font-weight: 700;
+}
+.weather-details .weather-today .content-box .degree-weather .icon-weather {
+  /* width: 80px; */
+}
+.weather-details .weather-today .content-box .custom {
+  color: var(--blue-color);
+  margin: 20px 0;
+}
+.weather-details .weather-today .content-box span {
+  margin-right: 20px;
+  color: var(--gray-color);
+}
+.weather-details .weather-today .content-box span img {
+  margin-right: 5px;
+}
+.weather-details .weather-box:nth-child(2) {
+  background-color: var(--secondry-color);
+}
+.weather-box {
+  width: 33.3%;
+  color: var(--gray-color);
+}
+.weather-box .header-box {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  font-weight: 400;
+}
+.weather-box .content-box {
+  padding: 50px 20px 10px;
+  text-align: center;
+}
+.weather-box .content-box .icon-weather {
+  margin-bottom: 20px;
+}
+.weather-box .content-box .icon-weather img {
+  width: 48px;
+}
+.weather-box .content-box .number {
+  color: white;
+  font-weight: 700;
+  font-size: 24px;
+}
+.weather-box .content-box .custom {
+  color: var(--blue-color);
+  margin: 20px 0;
+}
+/* Footer */
+footer {
+  background-color: var(--secondry-color);
+}
+footer form {
+  position: relative;
+  margin-bottom: 30px;
+}
+footer form input[type="text"] {
+  padding: 20px 80px 20px 20px;
+  background-color: var(--main-color);
+  width: 100%;
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  color: var(--white-color);
+}
+footer form input[type="submit"] {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  border: none;
+  border-radius: 30px;
+  color: var(--white-color);
+  background-color: var(--blue-color);
+  padding: 10px 20px;
+}
+footer .social-links {
+  display: flex;
+}
+footer .social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  color: var(--blue-color);
+  line-height: 2;
+  transition: all 0.3s;
+  margin: 3px;
+}
+footer .social-links a:hover {
+  color: var(--white-color);
+  background-color: var(--blue-color);
+}
+footer .copy-right {
+  font-size: 14px;
+}
+
+/* Resbonsive */
+@media screen and (max-width: 992px) {
+  header .logo-div ul.main-ul {
+    display: none !important;
+  }
+  .weather-details .weather-today .content-box {
+    text-align: center;
+  }
+  .weather-details .weather-box {
+    width: 100%;
+  }
+  .bars {
+    display: block;
+  }
+}
